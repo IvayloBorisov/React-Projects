@@ -3,23 +3,23 @@ export const navLinksInfo = [
 
     {
         id: 1,
-        title: 'All Films',
-        path: '',
+        title: 'Popular Films',
+        path: '/',
     },
     {
         id: 2,
         title: 'Top Films',
-        path: '',
+        path: '/top_rated',
     },
     {
         id: 3,
-        title: 'Coming Soon',
-        path: '',
+        title: 'Upcoming',
+        path: '/upcoming',
     },
     {
         id: 4,
-        title: 'Out Now',
-        path: '',
+        title: 'Now Playing',
+        path: '/now_playing',
     },
     {
         id: 5,
