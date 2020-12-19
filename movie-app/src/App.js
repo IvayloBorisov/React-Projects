@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Navigation } from './components/index';
+import { Header } from './components/index';
 
 const App = () => {
 
   return(
     <Router>
-      <Navigation type={ "header" }/>
+      <Header />
       <Switch>
 
       </Switch>
