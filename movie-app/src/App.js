@@ -1,25 +1,28 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-import { Header, Footer } from './components/index';
-import { HomePage, NowPlayingPage, TopRatedPage, UpcomingPage, DetailsPage, NotFoundPage  } from './pages/index';
+import { getFilmsData } from './api/index';
+
 
 const App = () => {
 
-  return(
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={ HomePage } />
-        <Route path="/now_playing" component={ NowPlayingPage } />
-        <Route path="/top_rated" component={ TopRatedPage } />
-        <Route path="/upcoming" component={ UpcomingPage } />
-        <Route path="/movie/:id" component={ DetailsPage }/>
+  const keyWord = "popular";
+  const [ films, setPopularFilms ] = useState([]);
 
-        <Route component={ NotFoundPage } />
-        
-      </Switch>
-      <Footer />
-    </Router>
+  useEffect(() => {
+
+      const getData = async () => {
+        setPopularFilms(await getFilmsData(keyWord));
+      }
+      getData();
+
+  }, []);
+
+  console.log(films);
+
+  return(
+    <div>
+
+    </div>
   )
 }
 
