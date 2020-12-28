@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Header, Footer } from './components/index';
-import { HomePage,
+import {
+         HomePage,
          NowPlayingPage,
          TopRatedPage, 
          UpcomingPage, 

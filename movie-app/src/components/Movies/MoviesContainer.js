@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from 'react';
 
-import { MovieCard } from '../index';
+import { DetailsCard, MovieCard } from '../index';
 import { getFilmsData } from '../../api/index';
 
 const MoviesContainer = ({ urlParam }) => {
 
-    const [ movies, setMovies ] = useState();
+    const [ data, setData ] = useState({});
 
     useEffect(() => {
 
         const getData = async () => {
-            setMovies(await getFilmsData(urlParam));
+            setData(await getFilmsData(urlParam));
         }
         getData();
 
     }, [urlParam]);
-    console.log(movies)
 
     return(
         <div>           
               {
-                movies ?  movies.results.map(movie => {
-                    return <MovieCard key={ movie.id} title={ movie.title } imageUrl={ movie.backdrop_path } />
-                }) : "Loading ...."
+                data.hasOwnProperty('results') ?  data.results.map(movie => {
+                    return <MovieCard key={ movie.id}  movie={ movie } />
+                }) : data ? <DetailsCard movie={ data }/> : "Loading ..."
               }            
         </div>
 
