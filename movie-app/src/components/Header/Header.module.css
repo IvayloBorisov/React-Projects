@@ -1,0 +1,18 @@
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #404447;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+@media (min-width: 900px) {
+
+    .header {
+        flex-wrap: nowrap;
+    }
+}

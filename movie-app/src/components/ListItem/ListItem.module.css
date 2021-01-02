@@ -1,0 +1,13 @@
+
+.header-nav-item {
+    width: 50%;
+    text-align: center;
+    padding: 1em 1.5em;
+}
+
+@media (min-width: 540px) {
+
+    .header-nav-item {
+        padding: 1em 0;
+    }
+}

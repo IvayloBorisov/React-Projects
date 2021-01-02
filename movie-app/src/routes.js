@@ -13,7 +13,7 @@ import {
 const Routes = () => {
 
     return(
-        <Router>
+    <Router>
       <Header />
       <Switch>
         <Route exact path="/" component={ HomePage } />

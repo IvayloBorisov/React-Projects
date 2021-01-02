@@ -1,0 +1,14 @@
+
+.footer {
+    width: 100%;
+    padding: 1em 0;
+    background-color: #404447;
+    text-align: center;
+}
+
+
+@media (min-width: 540px) {
+    .footer {
+        display: block;
+    }
+}

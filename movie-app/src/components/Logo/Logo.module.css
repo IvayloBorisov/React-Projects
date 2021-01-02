@@ -1,12 +1,27 @@
 .container {
-
-}
-
-.image {
-    width: 100px;
-    height: auto;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5em;
 }
 
 .link {
-    color: red;
+    color: #fff;
+}
+
+.title {
+    color: #B5CF4D; 
+}
+
+
+@media (min-width: 900px) {
+
+    .container {
+        width: 50%;
+        text-align: left;
+    }
+
+    .link {
+        margin-left: 1.5em;
+    }
 }

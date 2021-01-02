@@ -1,19 +1,25 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const MovieCard = props => {
+import styles from "./MovieCard.module.css";
 
-    const { title, backdrop_path, id } = props.movie;
+const MovieCard = ({ title, backdrop_path, id }) => {
 
-    return(
-        <div className="card-container">
-            <div className="image-container">
-                <Link to={ `/movie/${ id }` }>
-                  <img src={ `https://image.tmdb.org/t/p/w500${ backdrop_path }` } alt="movie-poster" />
-                </Link>
-            </div>
-            <h3 className="movie-title">{ title }</h3>
-        </div>
-    )
-}
+  return (
+    <div className={styles.card}>
+      <div className={styles["image-container"]}>
+        <Link to={`/movie/${id}`}>
+          <img
+            className={ styles.image }
+            src={`https://image.tmdb.org/t/p/w500${ backdrop_path } `}
+            alt="movie-poster"
+          />
+        </Link>
+      </div>
+      <div className={styles.content}>
+        <h3 className={styles["card-title"]}>{title}</h3>
+      </div>
+    </div>
+  );
+};
 
 export default MovieCard;

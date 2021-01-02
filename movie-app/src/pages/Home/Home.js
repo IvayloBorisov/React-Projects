@@ -1,10 +1,12 @@
 import { MoviesContainer } from '../../components/index';
 
+import styles from './Home.module.css'
+
 const Home = () => {
 
     return(
-        <div> 
-            <h1>Home page</h1>
+        <div className={ styles.container }> 
+            <h1 className={ styles.aside }>Home page</h1>
             <MoviesContainer urlParam={ "popular" }/>
         </div>
     )
