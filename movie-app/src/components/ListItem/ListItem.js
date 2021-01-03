@@ -7,7 +7,7 @@ const ListItem = ({ title, path, type }) => {
 
     return(
         <li className={ styles[ `${ type }-nav-item` ] }>
-            <Link to={ path } className={ `${ type }-nav-link` }>{ title }</Link>
+            <Link to={ path } className={ styles[`${ type }-nav-link`] }>{ title }</Link>
         </li>
     )
 }

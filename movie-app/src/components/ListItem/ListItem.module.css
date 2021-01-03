@@ -2,12 +2,24 @@
 .header-nav-item {
     width: 50%;
     text-align: center;
-    padding: 1em 1.5em;
+}
+
+.header-nav-item:hover {
+    background-color: #333333;
+}
+
+.header-nav-link {
+    display: block;
+    padding: 1.5em 0em;
+}
+
+.header-nav-link:hover {
+    color: #B5CF4D; 
 }
 
 @media (min-width: 540px) {
 
     .header-nav-item {
-        padding: 1em 0;
+        /* padding: 1em 0; */
     }
 }

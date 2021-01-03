@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import styles from "./MovieCard.module.css";
+import styles from "./Card.module.css";
 
-const MovieCard = ({ title, backdrop_path, id }) => {
+const Card = ({ title, backdrop_path, id }) => {
 
   return (
     <div className={styles.card}>
@@ -22,4 +22,4 @@ const MovieCard = ({ title, backdrop_path, id }) => {
   );
 };
 
-export default MovieCard;
+export default Card;

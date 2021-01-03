@@ -11,7 +11,6 @@
 
 .list-container-show {
     width: 100%;
-    padding: 0.5em;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +37,6 @@
 
     .list-container-hidden {
         width: 100%;
-        padding: 0.5em;  
         display: flex;
         justify-content: center;
         align-items: center;
