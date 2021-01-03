@@ -6,3 +6,4 @@ export { default as Logo } from './Logo/Logo';
 export { default as MovieCard } from './Movie/MovieCard';
 export { default as MoviesContainer } from './Movies/MoviesContainer';
 export { default as DetailsCard } from './DetailsCard/DetailsCard';
+export { default as Title } from './Title/Title';

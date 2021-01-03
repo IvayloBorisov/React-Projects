@@ -6,8 +6,7 @@ const Home = () => {
 
     return(
         <div className={ styles.container }> 
-            <h1 className={ styles.aside }>Home page</h1>
-            <MoviesContainer urlParam={ "popular" }/>
+            <MoviesContainer urlParam={ "popular" } title={ 'Most popular films' } />
         </div>
     )
 }

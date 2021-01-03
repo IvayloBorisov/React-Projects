@@ -1,4 +1,3 @@
-import { Navigation } from '../index';
 
 import styles from './Footer.module.css';
 

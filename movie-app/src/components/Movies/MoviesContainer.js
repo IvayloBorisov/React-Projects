@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import { DetailsCard, MovieCard } from '../index';
+import { DetailsCard, MovieCard, Title } from '../index';
 import { getFilmsData } from '../../api/index';
 
 import styles from './MoviesContainer.module.css';
 
-const MoviesContainer = ({ urlParam }) => {
+const MoviesContainer = ({ urlParam, title }) => {
 
     const [ data, setData ] = useState({});
 
@@ -19,10 +19,10 @@ const MoviesContainer = ({ urlParam }) => {
 
     }, [urlParam]);
 
-    console.log(data)
 
     return(
-        <div className={ styles.container }>           
+        <div className={ styles.container }>
+            <Title  titlePage={ title } />           
               {
                 data.hasOwnProperty('results') ?  data.results.map(movie => {
                     return <MovieCard key={ movie.id}  { ...movie } />
