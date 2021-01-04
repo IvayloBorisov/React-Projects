@@ -1,4 +1,4 @@
-import { MoviesContainer } from '../../components/index';
+import { MoviesContainer, Aside } from '../../components/index';
 
 import styles from './Home.module.css'
 
@@ -6,7 +6,8 @@ const Home = () => {
 
     return(
         <div className={ styles.container }> 
-            <MoviesContainer urlParam={ "popular" } title={ 'Most popular films' } />
+            <MoviesContainer urlParam={ "movie/popular" } title={ 'Most popular films' } />
+            <Aside urlParam={ "tv/popular" } />
         </div>
     )
 }

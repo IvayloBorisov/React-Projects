@@ -5,7 +5,7 @@ import styles from './TopRated.module.css';
 const TopRated = () => {
   return (
     <div className={ styles.container }>
-      <MoviesContainer urlParam={"top_rated"} title={ 'Top rated' }/>
+      <MoviesContainer urlParam={"movie/top_rated"} title={ 'Top rated' }/>
     </div>
   );
 };

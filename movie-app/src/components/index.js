@@ -7,3 +7,4 @@ export { default as Card } from './Movie/Card';
 export { default as MoviesContainer } from './Movies/MoviesContainer';
 export { default as DetailsCard } from './DetailsCard/DetailsCard';
 export { default as Title } from './Title/Title';
+export { default as Aside } from './Aside/Aside';

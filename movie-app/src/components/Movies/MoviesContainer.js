@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { DetailsCard, Card, Title } from '../index';
-import { getFilmsData } from '../../api/index';
+import { getData } from '../../api/index';
 
 import styles from './MoviesContainer.module.css';
 
@@ -11,29 +11,24 @@ const MoviesContainer = ({ urlParam, title }) => {
 
     useEffect(() => {
 
-        const getData = async () => {
-            const movies = await getFilmsData(urlParam);
+        const getFilmsData = async () => {
+            const movies = await getData(urlParam);
             setData(movies)
         }
-        getData();
-
+        getFilmsData();
+        
     }, [urlParam]);
-
-    console.log(data);
-
 
     return(
         <div className={ styles.container }>
             <Title  titlePage={ title } />           
               {
                 data.hasOwnProperty('results') ?  data.results.map(movie => {
-                    return <Card key={ movie.id}  { ...movie } />
+                    return <Card key={ movie.id} type={ 'movie' }  { ...movie } />
                 }) : data ? <DetailsCard movie={ data }/> : "Loading ..."
               }            
         </div>
-
     )
-
 }
 
 export default MoviesContainer;
