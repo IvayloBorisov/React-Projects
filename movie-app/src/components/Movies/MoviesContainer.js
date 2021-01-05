@@ -18,10 +18,9 @@ const MoviesContainer = ({ urlParam, title }) => {
         getFilmsData();
         
     }, [urlParam]);
-
     return(
         <div className={ styles.container }>
-            <Title  titlePage={ title } />           
+            <Title  titlePage={ title } type={ 'movie' } />           
               {
                 data.hasOwnProperty('results') ?  data.results.map(movie => {
                     return <Card key={ movie.id} type={ 'movie' }  { ...movie } />

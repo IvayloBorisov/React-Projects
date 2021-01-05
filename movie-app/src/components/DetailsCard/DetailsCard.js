@@ -2,7 +2,7 @@
 const DetailsCard = ({ movie }) => {
 
     return(
-        <div>{ console.log(movie) }</div>
+        <div>DetailsPage</div>
     )
 
 }

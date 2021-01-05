@@ -1,6 +1,5 @@
 
 export const navLinksInfo = [
-
     {
         id: 1,
         title: 'Popular Films',
@@ -27,3 +26,16 @@ export const navLinksInfo = [
         path: '',
     },
 ];
+
+export const formatDate = input => {
+    const date = new Date(input);
+    return date.getFullYear();
+} 
+
+export const formatGenres = (allGenres, tvGenre) => {
+    const result = allGenres.filter(({ id }) => tvGenre.includes(parseInt(id)))
+                             .map(object => object.name);
+    return result.length > 0 ? result.join(' | ') : result;
+}
+
+

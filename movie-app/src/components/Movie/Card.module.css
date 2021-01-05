@@ -1,3 +1,5 @@
+/* Movie card for mobile devices */
+
 .movie-card {
   width: 100%;
   position: relative;
@@ -26,7 +28,7 @@
     inset 0 0 50px 1px transparent;
 }
 
-.image {
+.movie-image {
   display: block;
   max-width: 100%;
   height: auto;
@@ -55,5 +57,63 @@
 @media (min-width: 540px) {
   .movie-card {
     width: 45%;
+  }
+}
+
+/* TV card for mobile devices */
+
+.tv-card {
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+}
+
+.tv-image-container {
+  
+}
+
+.tv-image {
+  width: 100%;
+  display: block;
+  height: auto;
+  margin: 0.5em 0;
+
+}
+
+.tv-content {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.tv-card:hover .tv-content {
+  bottom: 0px;
+}
+
+.tv-title {
+  width: 80%;
+  color: #fff;
+  text-align: center;
+}
+
+.tv-info {
+
+}
+
+@media(min-width: 540px) {
+  
+  .tv-card {
+    width: 45%;
+    margin: 0em 0.5em;
   }
 }

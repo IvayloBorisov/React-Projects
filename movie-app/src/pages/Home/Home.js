@@ -7,7 +7,7 @@ const Home = () => {
     return(
         <div className={ styles.container }> 
             <MoviesContainer urlParam={ "movie/popular" } title={ 'Most popular films' } />
-            <Aside urlParam={ "tv/popular" } />
+            <Aside />
         </div>
     )
 }

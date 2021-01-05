@@ -1,11 +1,12 @@
+/* Movie title for mobile devices */
 
-.container {
+.movie-container {
     width: calc(100% - 1em);
     margin-top: 2em;
     margin-bottom: 3px;
     padding: 0.5em;
     text-align: left;
-    background-color: #333333;
+    background-color: #222222
 }
 
 .title {
@@ -17,8 +18,19 @@
 
 @media (min-width: 540px) {
 
-    .container {
+    .movie-container {
         width: calc(90% + 1em);
         margin-top: 4em;
     }
 }
+
+/* TV title for mobile devices */
+
+.tv-container {
+    width: 100%;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    text-align: left;
+    background-color: #3F4346
+}
+
