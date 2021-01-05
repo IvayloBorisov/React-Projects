@@ -35,7 +35,9 @@ export const formatDate = input => {
 export const formatGenres = (allGenres, tvGenre) => {
     const result = allGenres.filter(({ id }) => tvGenre.includes(parseInt(id)))
                              .map(object => object.name);
-    return result.length > 0 ? result.join(' | ') : result;
+    return result.length > 0 ? result.slice(0, 2).join(' | ') : result;
 }
+
+export const formatOverview = string => string.slice(0, 120) + "...";
 
 

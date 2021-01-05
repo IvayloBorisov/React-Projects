@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { formatDate } from '../../utils/index';
+import { formatDate, formatOverview } from '../../utils/index';
 
 import styles from "./Card.module.css";
 
@@ -11,7 +11,8 @@ const Card = ({
                poster_path, 
                id, 
                vote_average, 
-               first_air_date, 
+               first_air_date,
+               overview, 
                cardGenre 
               }) => {
     return (
@@ -29,11 +30,15 @@ const Card = ({
         <h3 className={styles[`${ type }-title` ]}>{ type === 'movie' ? title : name }</h3>
         {
           type === 'tv' ? 
-            <ul className={ styles[ 'tv-info' ] }>
-              <li>{ `${ formatDate(first_air_date) }` }</li>
-              <li>{ `${ cardGenre }` }</li>
-              <li>{ ` ${ vote_average }/10` }</li>
-            </ul>  : ''
+            <div className={ styles[ `${ type }-info` ] }>
+              <span>{ `${ formatDate(first_air_date) }` }</span>
+              <span>{ `${ cardGenre }` }</span>
+              <span>{ ` ${ vote_average }/10` }</span>
+              <div className={ styles[ 'overview-info' ] }>
+                <h4 className={ styles[ `${ type }-overview` ]} >Summary</h4>
+                <p >{ `${ formatOverview(overview) }` }</p>
+              </div> 
+            </div>  : ''
         }
       </div>
     </div>
