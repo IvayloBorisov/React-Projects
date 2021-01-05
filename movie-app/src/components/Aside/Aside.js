@@ -25,11 +25,12 @@ const Aside = () => {
             <Title titlePage={ 'You might also like' } type={ 'tv' } />
           {
               data.hasOwnProperty('results') ? data.results.slice(0, 10).map(tv => {
+                console.log(tv.poster_path)
+
                   const genre = formatGenres(genres, tv.genre_ids);
                   return <Card key={ tv.id } type={ 'tv' } cardGenre={ genre } { ...tv } />
               }) : "Loading..."
           }
-          <Card />
         </aside>
     )
 }
