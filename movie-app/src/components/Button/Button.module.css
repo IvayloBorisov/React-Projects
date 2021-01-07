@@ -7,10 +7,11 @@
     outline: none;
     background-color: #3F4346;
     color: #fff;
-    letter-spacing: 2px;
-    font-size: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 13px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     background: #3F4346;
 }
 
@@ -18,3 +19,15 @@
     color: #B5CF4D;
     transform: scale(1.05);
 }
+
+
+@media (min-width: 540px) {
+
+    .btn {
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 16px;  
+    }
+}
+
+
