@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { ListItem } from "../index";
+import { ListItem, Search } from "../index";
 
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import { navLinksInfo } from "../../utils/index";
@@ -36,6 +36,7 @@ const Navigation = ({ type }) => {
           }
         </ul>
       </nav>
+      <Search />
       <button 
         className={ styles[ 'header-button' ] } 
         onClick={ clickHandler } >
