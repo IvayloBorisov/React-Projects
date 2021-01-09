@@ -150,6 +150,8 @@
   }
 }
 
+/* TV card for Desktop devices */
+
 @media (min-width: 1024px) {
 
   .tv-card {
