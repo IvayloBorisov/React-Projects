@@ -13,4 +13,3 @@ export const getData = async (keyWord, pageNumber = 1) => {
 
 // https://api.themoviedb.org/3/search/movie?api_key=edf097a9f6396e85fc55d09bd44e9169&query=Brad
 
-// &language=en-US&page=2
