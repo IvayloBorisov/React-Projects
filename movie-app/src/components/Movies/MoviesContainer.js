@@ -36,7 +36,7 @@ const MoviesContainer = ({ urlParam, title }) => {
                 {
                     data.hasOwnProperty('results') ?  data.results.map(movie => {
                         return <Card key={ movie.id} type={ 'movie' }  { ...movie } />
-                    }) : data ? <DetailsCard movie={ data }/> : "Loading ..."
+                    }) : <DetailsCard movie={ data }/>
                 }            
             </div>
             <div className={ styles[ 'button-container' ] }>

@@ -24,10 +24,10 @@ const Aside = () => {
         <aside className={ styles.aside }>
             <Title titlePage={ 'You might also like' } type={ 'tv' } />
           {
-              data.hasOwnProperty('results') ? data.results.slice(0, 10).map(tv => {
+              data.hasOwnProperty('results') && data.results.slice(0, 10).map(tv => {
                   const genre = formatGenres(genres, tv.genre_ids);
                   return <Card key={ tv.id } type={ 'tv' } cardGenre={ genre } { ...tv } />
-              }) : "Loading..."
+              })
           }
         </aside>
     )
