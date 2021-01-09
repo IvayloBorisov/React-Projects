@@ -1,7 +1,28 @@
 .container {
+    width: 100%;
     display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 4em;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+
+    .container {
+       align-items: start;
+       
+    }
+
+    .wrapper {
+        width: 60%;
+    }
 }

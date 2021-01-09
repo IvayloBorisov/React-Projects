@@ -149,3 +149,10 @@
     bottom: -220px;
   }
 }
+
+@media (min-width: 1024px) {
+
+  .tv-card {
+    width: 45%;
+  }
+}

@@ -6,7 +6,9 @@ const NowPlaying = () => {
 
   return (
     <div className={ styles.container }>
-      <MoviesContainer urlParam={"movie/now_playing"} title={ 'Now in theatres' } />
+      <div className={ styles.wrapper }>
+        <MoviesContainer urlParam={"movie/now_playing"} title={ 'Now in theatres' } />
+      </div>
       <Aside />
     </div>
   );

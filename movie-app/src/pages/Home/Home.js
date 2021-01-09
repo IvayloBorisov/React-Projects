@@ -5,9 +5,11 @@ import styles from './Home.module.css'
 const Home = () => {
 
     return(
-        <div className={ styles.container }> 
-            <MoviesContainer urlParam={ "movie/popular" } title={ 'Most popular films' } />
-            <Aside />
+        <div className={ styles.container }>
+            <div className={ styles.wrapper }>
+             <MoviesContainer urlParam={ "movie/popular" } title={ 'Most popular films' } />
+            </div> 
+             <Aside />
         </div>
     )
 }

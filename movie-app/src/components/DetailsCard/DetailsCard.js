@@ -2,9 +2,8 @@
 const DetailsCard = ({ movie }) => {
 
     return(
-        <div>DetailsPage</div>
+        <div>Details</div>
     )
-
 }
 
 export default DetailsCard;
