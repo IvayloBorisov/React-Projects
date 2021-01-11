@@ -11,3 +11,4 @@ export { default as Aside } from './Aside/Aside';
 export { default as Search } from './Search/Search';
 export { default as Button } from './Button/Button';
 export { default as Loading } from './Loading/Loading';
+export { default  as Image} from './ImageComponent/Image';
