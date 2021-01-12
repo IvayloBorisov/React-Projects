@@ -1,14 +1,20 @@
-import { MoviesContainer, Aside } from '../../components/index';
-
-import styles from './Upcoming.module.css';
+import { MoviesContainer, Aside, Footer } from "../../components/index";
+import useSmoothLoading from "../../hooks/useSmoothLoading";
+import styles from "./Upcoming.module.css";
 
 const Upcoming = () => {
+  const [name, setName] = useSmoothLoading();
+
   return (
-    <div className={ styles.container }>
-      <div className={ styles.wrapper }>
-       <MoviesContainer urlParam={"movie/upcoming"} title={ 'Coming soon' }/>
+    <div onLoad={setName} className={`${styles.container} ${styles[name]}`}>
+      <div className={styles.wrapper}>
+        <MoviesContainer 
+         urlParam={"movie/upcoming"} 
+         title={"Coming soon"} 
+        />
       </div>
-       <Aside />
+      <Aside />
+    <Footer />
     </div>
   );
 };

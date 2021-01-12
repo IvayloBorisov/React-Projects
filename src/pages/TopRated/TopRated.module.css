@@ -7,6 +7,15 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 4em;
+    transition: opacity 3s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
 }
 
 .wrapper {
@@ -23,7 +32,6 @@
 
     .container {
        align-items: start;
-       
     }
 
     .wrapper {

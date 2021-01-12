@@ -1,13 +1,18 @@
-import { MoviesContainer, Aside } from '../../components/index';
+import { MoviesContainer, Aside } from "../../components/index";
+import useSmoothLoading from "../../hooks/useSmoothLoading";
 
-import styles from './NowPlaying.module.css';
+import styles from "./NowPlaying.module.css";
 
 const NowPlaying = () => {
+  const [name, setName] = useSmoothLoading();
 
   return (
-    <div className={ styles.container }>
-      <div className={ styles.wrapper }>
-        <MoviesContainer urlParam={"movie/now_playing"} title={ 'Now in theatres' } />
+    <div onLoad={setName} className={`${styles.container} ${styles[name]}`}>
+      <div className={styles.wrapper}>
+        <MoviesContainer
+          urlParam={"movie/now_playing"}
+          title={"Now in theatres"}
+        />
       </div>
       <Aside />
     </div>

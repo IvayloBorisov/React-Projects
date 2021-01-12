@@ -5,7 +5,6 @@ import styles from "./Image.module.css";
 const Image = ({ type, id, backdrop_path, poster_path }) => {
   const [imageIsLoaded, setImageIsLoaded] = useState(false);
   const handleImageLoad = () => {
-    console.log("yes");
     setImageIsLoaded(true);
   };
 

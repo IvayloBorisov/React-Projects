@@ -23,6 +23,10 @@
 
 @media (min-width: 540px) {
 
+    .btn-container {
+        width: calc(90% + 1em);
+    }
+
     .btn {
         font-weight: 600;
         letter-spacing: 2px;

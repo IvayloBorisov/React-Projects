@@ -23,9 +23,7 @@ const Routes = () => {
         <Route path="/movie/:id" component={ DetailsPage }/>
 
         <Route component={ NotFoundPage } />
-        
       </Switch>
-      <Footer />
     </Router>
     )
 }

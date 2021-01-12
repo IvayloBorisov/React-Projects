@@ -40,5 +40,4 @@ export const formatGenres = (allGenres, tvGenre) => {
 
 export const formatOverview = string => string.slice(0, 120) + "...";
 
-export const fakeDelay = () => new Promise(resolve => setTimeout(() => resolve(), 1200));
 
