@@ -9,6 +9,7 @@ const MoviesContainer = ({ urlParam, title }) => {
   const [data, setData] = useState({});
   const [pageNumber, setPageNumber] = useState(1);
 
+  console.log(data)
   useEffect(() => {
     const getFilmsData = async () => {
       const movies = await getData(urlParam, pageNumber);
