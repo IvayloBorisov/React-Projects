@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
-import useSmoothLoading from "../../hooks/useSmoothLoading";
 import { DetailsCard, Card, Title, Button } from "../index";
 import { getData } from "../../api/index";
 
 import styles from "./MoviesContainer.module.css";
 
 const MoviesContainer = ({ urlParam, title }) => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
 
-  console.log(data)
   useEffect(() => {
     const getFilmsData = async () => {
       const movies = await getData(urlParam, pageNumber);
@@ -32,17 +30,21 @@ const MoviesContainer = ({ urlParam, title }) => {
     <>
       <div className={styles.container}>
         <Title titlePage={title} type={"movie"} />
-        {data.hasOwnProperty("results") ? (
+        {data.results ? (
           data.results.map((movie) => {
             return <Card key={movie.id} type={"movie"} {...movie} />;
           })
         ) : (
+        
           <DetailsCard movie={data} />
         )}
+        {data.results &&
         <div className={styles["btn-container"]}>
           {pageNumber !== 1 && <Button click={handleClick} name={"prev"} />}
           <Button click={handleClick} name={"next"} />
         </div>
+        }
+        
       </div>
     </>
   );

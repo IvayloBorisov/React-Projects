@@ -1,4 +1,3 @@
-
 export const navLinksInfo = [
     {
         id: 1,
@@ -27,9 +26,14 @@ export const navLinksInfo = [
     },
 ];
 
-export const formatDate = input => {
+export const formatDate = (input, type = 'tv') => {
     const date = new Date(input);
-    return date.getFullYear();
+    if(type === 'tv') {
+     return date.getFullYear();
+    }
+    const token = date.toString().split(' ');
+    const result = token.slice(1, 3).join(' ') + ", " + token.slice(3, 4);
+    return result;
 } 
 
 export const formatGenres = (allGenres, tvGenre) => {
@@ -39,5 +43,7 @@ export const formatGenres = (allGenres, tvGenre) => {
 }
 
 export const formatOverview = string => string.slice(0, 120) + "...";
+
+export const extractGenreName = str => str.split(" ")[0].split("&")[0];
 
 

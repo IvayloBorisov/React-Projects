@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Header, Footer } from './components/index';
+import { Header } from './components/index';
 import {
          HomePage,
          NowPlayingPage,
          TopRatedPage, 
          UpcomingPage, 
-         DetailsPage, 
-         NotFoundPage  
+         MovieDetailsPage,
+         TvDetailsPage,
+         NotFoundPage,  
         } from './pages/index';
 
 const Routes = () => {
@@ -20,7 +21,8 @@ const Routes = () => {
         <Route path="/now_playing" component={ NowPlayingPage } />
         <Route path="/top_rated" component={ TopRatedPage } />
         <Route path="/upcoming" component={ UpcomingPage } />
-        <Route path="/movie/:id" component={ DetailsPage }/>
+        <Route path="/movie/:id" component={ MovieDetailsPage }/>
+        <Route path="/tv/:id" component={ TvDetailsPage }/>
 
         <Route component={ NotFoundPage } />
       </Switch>
