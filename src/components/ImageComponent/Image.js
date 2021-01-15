@@ -4,6 +4,7 @@ import { AltImage } from '../index';
 import styles from "./Image.module.css";
 
 const Image = ({ type, id, backdrop_path, poster_path }) => {
+  
   const [imageIsLoaded, setImageIsLoaded] = useState(false);
   const [ alt, setAlt ] = useState(false);
   const handleImageLoad = () => {
@@ -12,7 +13,7 @@ const Image = ({ type, id, backdrop_path, poster_path }) => {
 
   return (
     <div className={styles[`${type}-image-container`]}>
-      <Link to={`/movie/${id}`}>
+      <Link to={`/${type}/${id}`}>
         { !alt ?
           <img
           className={`${

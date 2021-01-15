@@ -1,0 +1,71 @@
+.container {
+    width: calc(100% - 1em);
+    background-color: #fff;
+    color: #4C4C4C;
+    font-weight: 700;
+    font-size: 16px;
+    transition: opacity 3s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.image {
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-size: cover;
+    background-position: center;
+}
+
+.movie-info {
+    padding: 0.5em 0em;
+}
+
+.movie-info li {
+    padding: 0.5em 1em;
+}
+
+li:nth-child(4) > p {
+    padding: 0.5em 0em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.company, .date, .rating, .genre, .overview {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.genre {
+    padding: 0.2em;
+    margin: 0.2em 0em;
+    border-right: 5px solid #fff;
+    width: 50%;
+    background-color: #B5CF4D;
+    text-align: center;
+}
+
+
+@media(min-width: 540px) {
+
+    .container {
+        width: calc(90% + 0.8em);
+    }
+
+    .genre {
+        width: 33.33%;
+    }
+}
+
+
+
+
+
+
