@@ -38,11 +38,11 @@ export const formatDate = (input, type = 'tv') => {
 
 export const formatGenres = (allGenres, tvGenre) => {
     const result = allGenres.filter(({ id }) => tvGenre.includes(parseInt(id)))
-                             .map(object => object.name);
+                             .map(object => extractGenreName(object.name));
     return result.length > 0 ? result.slice(0, 2).join(' | ') : result;
 }
 
-export const formatOverview = string => string.slice(0, 120) + "...";
+export const formatOverview = string => string.slice(0, 80) + "...";
 
 export const extractGenreName = str => str.split(" ")[0].split("&")[0];
 

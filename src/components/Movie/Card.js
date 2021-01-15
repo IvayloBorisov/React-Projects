@@ -27,7 +27,7 @@ const Card = ({
     <div className={styles[ `${ type }-card` ]}>
       <Image { ...imageProp }/>
       <div className={styles[ `${ type }-content` ]}>
-        <h3 className={styles[`${ type }-title` ]}>{ type === 'movie' ? title : name }</h3>
+        <h4 className={styles[`${ type }-title` ]}>{ type === 'movie' ? title : name }</h4>
         {
           type === 'tv' ? 
             <div className={ styles[ `${ type }-info` ] }>

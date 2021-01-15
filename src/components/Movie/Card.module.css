@@ -135,6 +135,11 @@
 
 @media (min-width: 1024px) {
 
+  .tv-content {
+    height: 240px;
+    bottom: -240px;
+  }
+
   .tv-card {
     width: 45%;
   }
