@@ -14,13 +14,15 @@ const DetailsCard = ({ movie }) => {
     production_companies,
   } = movie;
 
-
-
   return (
     <div className={ `${styles.container} ` } >
-      <div className={ styles.image } 
-           style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${backdrop_path})` }}>
-      </div>
+      { 
+        backdrop_path ? 
+          <div className={ styles.image } 
+          style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${backdrop_path})` }}>
+          </div>
+        : <AltImage />
+      }
       <ul className={styles["movie-info"]}>
         <li>
           <p>

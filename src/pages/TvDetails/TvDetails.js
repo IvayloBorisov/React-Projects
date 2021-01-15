@@ -15,7 +15,6 @@ const TvDetails = () => {
             <Aside />
         </div>
     )
-
 }
 
 export default TvDetails;
