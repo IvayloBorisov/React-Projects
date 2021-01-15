@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { Aside, MoviesContainer } from '../../components';
+import { Aside, MoviesContainer, Footer } from '../../components';
 
 import useSmoothLoading from '../../hooks/useSmoothLoading';
 import styles from './TvDetails.module.css';
@@ -13,6 +13,7 @@ const TvDetails = () => {
                 <MoviesContainer urlParam={ `tv/${tvId}` } title={ "About the show" } />
             </div>
             <Aside />
+            <Footer />
         </div>
     )
 }

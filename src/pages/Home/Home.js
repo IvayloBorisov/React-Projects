@@ -1,5 +1,5 @@
 import useSmoothLoading from '../../hooks/useSmoothLoading';
-import { MoviesContainer, Aside } from "../../components/index";
+import { MoviesContainer, Aside, Footer } from "../../components/index";
 
 import styles from "./Home.module.css";
 
@@ -15,6 +15,7 @@ const Home = () => {
           />
         </div>
         <Aside />
+        <Footer />
     </div>
   );
 };

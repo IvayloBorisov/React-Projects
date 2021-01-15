@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useSmoothLoading from '../../hooks/useSmoothLoading';
-import { MoviesContainer, Aside } from "../../components/index";
+import { MoviesContainer, Aside, Footer } from "../../components/index";
 import styles from './MovieDetails.module.css';
 
 const MovieDetails = () => {
@@ -16,6 +16,7 @@ const MovieDetails = () => {
         />
       </div>
       <Aside />
+      <Footer />
     </div>
   );
 };

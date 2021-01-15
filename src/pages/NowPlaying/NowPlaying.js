@@ -1,4 +1,4 @@
-import { MoviesContainer, Aside } from "../../components/index";
+import { MoviesContainer, Aside, Footer } from "../../components/index";
 import useSmoothLoading from "../../hooks/useSmoothLoading";
 
 import styles from "./NowPlaying.module.css";
@@ -15,6 +15,7 @@ const NowPlaying = () => {
         />
       </div>
       <Aside />
+      <Footer />
     </div>
   );
 };

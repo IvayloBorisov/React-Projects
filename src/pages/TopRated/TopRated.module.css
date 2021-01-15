@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4em;
     transition: opacity 3s;
 }
 
