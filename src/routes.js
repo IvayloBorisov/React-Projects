@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import { Header } from './components/index';
 import {
@@ -8,7 +8,6 @@ import {
          UpcomingPage, 
          MovieDetailsPage,
          TvDetailsPage,
-         NotFoundPage,  
         } from './pages/index';
 
 const Routes = () => {
@@ -23,8 +22,7 @@ const Routes = () => {
         <Route path="/upcoming" component={ UpcomingPage } />
         <Route path="/movie/:id" component={ MovieDetailsPage }/>
         <Route path="/tv/:id" component={ TvDetailsPage }/>
-
-        <Route component={ NotFoundPage } />
+        <Redirect to={HomePage}/>
       </Switch>
     </Router>
     )
