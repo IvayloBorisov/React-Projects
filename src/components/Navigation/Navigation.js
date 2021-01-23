@@ -36,7 +36,6 @@ const Navigation = ({ type }) => {
           }
         </ul>
       </nav>
-      <Search />
       <button 
         className={ styles[ 'header-button' ] } 
         onClick={ clickHandler } >
