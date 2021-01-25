@@ -9,7 +9,7 @@ const Upcoming = () => {
     <div onLoad={setName} className={`${styles.container} ${styles[name]}`}>
       <div className={styles.wrapper}>
         <MoviesContainer 
-         urlParam={"movie/upcoming"} 
+         urlParam={["movie/upcoming"]} 
          title={"Coming soon"} 
         />
       </div>

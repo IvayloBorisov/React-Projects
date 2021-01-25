@@ -7,7 +7,6 @@
 
 .list-container-hidden {
     display: none;
-    transition:  0.5s;
 }
 
 .list-container-show {
@@ -17,7 +16,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    transition: 0.5s;
 }
 
 .header-button {
@@ -29,6 +27,22 @@
     color: #fff;
     outline: none;
     cursor: pointer;
+}
+
+.category-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    background-color: #333333;
+    color: #F1F1F0;
+    padding: 1.5em 0em;
+    border: 1px solid #333333;
+}
+
+.category-button:hover {
+    background-color: #B5CF4D;
 }
 
 .footer-icon {
@@ -52,10 +66,34 @@
 
 @media (min-width: 540px) {
 
-    .list-container-hidden, .list-container-show {
-        flex-wrap: nowrap;
+    .list-container-hidden,
+    .list-container-show,
+    .category-button {
         font-size: 13px;
         background-color: #404447;
+    }
+
+    .category-button {
+        padding: 1.5em 0em;
+        border: 2px solid #404447;
+    }
+
+    .list-container-hidden,
+    .list-container-show {
+        flex-wrap: nowrap;
+    }
+
+    .category-button:hover {
+        background-color: #333333;
+        border: 2px solid #333333;
+        color: #B5CF4D; 
+    }
+}
+
+@media (min-width: 900px) {
+
+    .header-nav {
+        width: 70%;
     }
 }
 

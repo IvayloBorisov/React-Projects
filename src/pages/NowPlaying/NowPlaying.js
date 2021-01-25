@@ -10,7 +10,7 @@ const NowPlaying = () => {
     <div onLoad={setName} className={`${styles.container} ${styles[name]}`}>
       <div className={styles.wrapper}>
         <MoviesContainer
-          urlParam={"movie/now_playing"}
+          urlParam={["movie/now_playing"]}
           title={"Now in theatres"}
         />
       </div>

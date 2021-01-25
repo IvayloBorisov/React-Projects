@@ -1,0 +1,19 @@
+/* Mobile Devices */
+
+.header-category-container {
+    width: 100%;
+    background-color: #000;
+}
+
+@media (min-width: 540px) {
+
+    .header-category-container {
+        padding: 4em 2.5em 0 2em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+ 

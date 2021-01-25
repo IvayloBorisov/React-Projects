@@ -10,7 +10,7 @@ const TopRated = () => {
     <div onLoad={setName} className={` ${styles.container} ${styles[name]} `}>
       <div className={styles.wrapper}>
         <MoviesContainer 
-         urlParam={"movie/top_rated"} 
+         urlParam={["movie/top_rated"]} 
          title={"Top rated"} 
         />
       </div>

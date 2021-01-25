@@ -10,7 +10,7 @@ const TvDetails = () => {
     return(
         <div onLoad={ setName } className={ `${ styles.container } ${ styles[name] }` }>
             <div className={ styles.wrapper }>
-                <MoviesContainer urlParam={ `tv/${tvId}` } title={ "About the show" } />
+                <MoviesContainer urlParam={ [`tv/${tvId}`] } title={ "About the show" } />
             </div>
             <Aside />
             <Footer />
