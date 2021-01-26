@@ -27,7 +27,6 @@
     }
 
     .footer-category-container {
-        /* padding: 1em; */
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -38,5 +37,11 @@
         color: #B5CF4D
     }
 }
+
+@media (min-width: 1024px) {
+
+    
+}
+
 
  
