@@ -1,48 +1,61 @@
-import { useState } from 'react'
+import { useState, useEffect } from "react";
 
-import { ListItem, Search } from "../index";
-
+import { ListItem, Categories } from "../index";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import { navLinksInfo } from "../../utils/index";
-
-import styles from './Navigation.module.css';
+import { getData } from "../../api";
+import styles from "./Navigation.module.css";
 
 const Navigation = ({ type }) => {
+  const [classToggle, setClassToggle] = useState("hidden");
+  const [isShowCategory, setIsShowCategory] = useState(type === 'footer' ? true : false);
+  const [moviesGenres, setMoviesGenres] = useState([]);
 
-  const [ classToggle, setClassToggle ] = useState('hidden'); 
+  useEffect(() => {
+    const getMoviesByGenre = async () => {
+      const result = await getData(["genre/movie/list"]);
+      setMoviesGenres(result.genres);
+    };
 
-  const clickHandler = event => {
-    console.log(styles)
-    event.preventDefault();
-    if(classToggle === 'hidden') {
-      return setClassToggle('show');
+    getMoviesByGenre();
+  }, []);
+
+  const clickHandler = (event) => {
+    
+    if (event.target.name === "category") {
+      return setIsShowCategory(!isShowCategory);
     }
-    return setClassToggle('hidden');
-  }
+    if (classToggle === "hidden") {
+      return setClassToggle("show");
+    }
+    return setClassToggle("hidden");
+  };
 
   return (
     <>
-      <nav className={ styles[`${type}-nav`] }>
-        <ul className={ styles[ `list-container-${ classToggle }` ] }>
-          {
-            navLinksInfo.map((item) => {
-              return <ListItem 
-                      key={ item.id } 
-                      title={ item.title } 
-                      path={ item.path } 
-                      type={ type }
-                    />;
-            })
-          }
+      <nav className={styles[`${type}-nav`]}>
+        <ul className={styles[`list-container-${classToggle}`]}>
+          {navLinksInfo.slice(0, navLinksInfo.length - 1).map((item) => {
+            return (
+              <ListItem
+                key={item.id}
+                title={item.title}
+                path={item.path}
+                type={type}
+              />
+            );
+          })}
+          <button className={styles["category-button"]}  name="category" onClick={clickHandler}>
+            Category
+          </button>
         </ul>
       </nav>
-      <button 
-        className={ styles[ 'header-button' ] } 
-        onClick={ clickHandler } >
-        { 
-          classToggle === 'hidden' ? <FaAngleDoubleDown /> : <FaAngleDoubleUp />
-        }
+      <button className={styles[`${type}-button`]} onClick={clickHandler}>
+        {classToggle === "hidden" ? <FaAngleDoubleDown /> : <FaAngleDoubleUp />}
       </button>
+      {isShowCategory && (
+        <Categories path={"/category"} type={type} genre={moviesGenres} />
+      )}
     </>
   );
 };

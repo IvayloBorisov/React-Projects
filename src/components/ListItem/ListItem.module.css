@@ -17,13 +17,50 @@
     color: #fff; 
 }
 
+.header-category-nav-item {
+    cursor: pointer;
+    width: 70%;
+    text-align: center;
+    background-color: #333333;
+    color: #F1F1F0;
+    margin-top: 4px;
+}
+
+.header-category-nav-item:hover{
+    background-color: #B5CF4D;
+}
+
+.header-category-nav-link {
+    display: block;
+    padding: 0.5em 0em;
+}
+
 @media (min-width: 540px) {
 
     .header-nav-item:hover {
         background-color: #333333;
     }
 
-    .header-nav-link:hover {
+    .header-nav-link:hover,
+    .header-category-nav-link:hover {
         color: #B5CF4D; 
+    }
+
+    .header-category-nav-item {
+        width: 30%;
+        margin: 4px;
+    }
+
+    .header-category-nav-item:hover {
+        background-color: #404447;
+        color: #B5CF4D; 
+
+    }
+}
+
+@media (min-width: 900px) {
+
+    .header-category-nav-item {
+        width: 15%;
     }
 }

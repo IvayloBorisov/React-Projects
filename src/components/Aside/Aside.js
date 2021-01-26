@@ -12,14 +12,14 @@ const Aside = () => {
 
     useEffect(() => {
         const getShowsData = async () => {
-            const tvShows = await getData("tv/popular");
-            const tvGenres = await getData("genre/tv/list");
+            const tvShows = await getData(["tv/popular"]);
+            const tvGenres = await getData(["genre/tv/list"]);
             setData(tvShows);
             setGenres(tvGenres.genres);
         }
         getShowsData();
     }, []);
-    console.log(genres)
+    
     return(
         <aside className={ styles.aside }>
             <Title titlePage={ 'You might also like' } type={ 'tv' } />

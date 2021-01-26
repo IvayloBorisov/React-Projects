@@ -10,7 +10,7 @@ const Home = () => {
     <div onLoad={ setName } className={`${ styles.container } ${ styles[ name ] }`}>
         <div className={styles.wrapper}>
           <MoviesContainer
-            urlParam={"movie/popular"}
+            urlParam={["movie/popular"]}
             title={"Most popular films"}
           />
         </div>

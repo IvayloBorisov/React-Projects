@@ -21,7 +21,7 @@
     height: auto;
     position: relative;
     z-index: -1;
-    transition: opacity 3s;
+    transition: opacity 2s;
   }
 
   .hidden {

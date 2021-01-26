@@ -6,6 +6,7 @@ import {
          NowPlayingPage,
          TopRatedPage, 
          UpcomingPage, 
+         CategoriesPage,
          MovieDetailsPage,
          TvDetailsPage,
         } from './pages/index';
@@ -20,6 +21,7 @@ const Routes = () => {
         <Route path="/now_playing" component={ NowPlayingPage } />
         <Route path="/top_rated" component={ TopRatedPage } />
         <Route path="/upcoming" component={ UpcomingPage } />
+        <Route path="/category/:id" component={ CategoriesPage } />
         <Route path="/movie/:id" component={ MovieDetailsPage }/>
         <Route path="/tv/:id" component={ TvDetailsPage }/>
         <Redirect to={HomePage}/>

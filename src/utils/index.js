@@ -22,7 +22,6 @@ export const navLinksInfo = [
     {
         id: 5,
         title: 'Categories',
-        path: '',
     },
 ];
 

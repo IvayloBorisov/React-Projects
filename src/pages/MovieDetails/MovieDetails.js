@@ -11,7 +11,7 @@ const MovieDetails = () => {
     <div onLoad={ setName } className={ `${ styles.container } ${ styles[name] }` }>
       <div className={ styles.wrapper }>
         <MoviesContainer
-          urlParam={`movie/${movieId}`}
+          urlParam={[`movie/${movieId}`]}
           title={"About the movie"}
         />
       </div>

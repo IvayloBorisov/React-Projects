@@ -2,14 +2,19 @@
 export const getData = async (keyWord, pageNumber = 1) => {
 
     const BASE_URL = 'https://api.themoviedb.org/3/';
-    const API_KEY = process.env.REACT_APP_API_KEY;
-    const QUERY = `&language=en-US&page=${ pageNumber }`
+    const API_KEY = 'edf097a9f6396e85fc55d09bd44e9169';
+    const QUERY = `&sort_by=popularity.desc&with_genres=${ keyWord[1] }`
+    let response = {};
 
-    const response = await fetch(`${ BASE_URL }${ keyWord }?api_key=${ API_KEY }${ QUERY }`);
+    if(keyWord.length > 1) {
+        response = await fetch(`${ BASE_URL }${ keyWord[0] }?api_key=${ API_KEY }&language=en-US${ QUERY }`);
+    } else {
+        response = await fetch(`${ BASE_URL }${ keyWord[0] }?api_key=${ API_KEY }&language=en-US&page=${ pageNumber }`);
+    }
+    
     const fetchedData = await response.json();
-
     return fetchedData;
 }
 
-// https://api.themoviedb.org/3/search/movie?api_key=edf097a9f6396e85fc55d09bd44e9169&query=Brad
+
 
