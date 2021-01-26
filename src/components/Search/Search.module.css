@@ -1,24 +1,41 @@
 /* Mobile devices  */
 
 .container {
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-input {
+    width: 60%;
+    outline: none;
+    padding: 1em 0em 1.1em 0.5em;
+    margin: 0.5em 0;
+    border: 2px solid #fff;
+}
 
+.search-input::placeholder {
+    color: #A2A298;
+    font-size: 16px;
 }
 
 .btn-submit {
-    width: 40px;
-    height: 40px;
+    cursor: pointer;
+    padding: 1em;
     border: none;
     outline: none;
-    color: #000;
+    color: #fff;
+    background-color: #B5CF4D;
+}
+
+.btn-submit:hover {
+    background-color: #212121;
 }
 
 .search-icon {
-    width: 20px;
-    height: 20px;
+    width: 1.3em;
+    height: 1.3em;
     font-weight: 600;
 }
 

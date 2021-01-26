@@ -4,7 +4,7 @@ import styles from "./Categories.module.css";
 const Categories = ({ type, genre }) => {
   return (
     <>
-      { type === 'footer' && <h4 className={styles.title}>Categories</h4> } 
+      { type === 'footer' && <h3 className={styles.title}>Categories</h3> } 
       <ul className={styles[`${type}-category-container`]}>
         {genre &&
           genre.map((genre) => (

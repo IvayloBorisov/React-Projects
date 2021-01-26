@@ -5,6 +5,11 @@
     background-color: #000;
 }
 
+.footer-category-container,
+.title {
+    display: none;
+}
+
 @media (min-width: 540px) {
 
     .header-category-container {
@@ -13,6 +18,24 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+    }
+
+    .footer-category-container,
+    .title {
+        display: block;
+        padding: 1em;
+    }
+
+    .footer-category-container {
+        /* padding: 1em; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        color: #B5CF4D
     }
 }
 
