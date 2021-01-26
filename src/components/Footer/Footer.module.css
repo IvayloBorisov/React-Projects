@@ -6,13 +6,6 @@
     text-align: center;
 }
 
-.wrapper {
-}
-
-.footer-title {
-
-}
-
 .subtitle {
     width: 80%;
     margin: 1em auto;
@@ -24,6 +17,23 @@
 .footer-end {
     margin: 1em 0;
     color: #A2A298
+}
+
+@media (min-width: 1024px) {
+
+    .title-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .title-container {
+        width: 70%;
+    }
+
+    .subtitle {
+        margin: 0 auto;
+    }
 }
 
 
