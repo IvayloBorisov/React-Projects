@@ -45,7 +45,9 @@
     background-color: #B5CF4D;
 }
 
-.footer-icon {
+.footer-nav,
+.footer-icon,
+.footer-button {
     display: none;
 }
 

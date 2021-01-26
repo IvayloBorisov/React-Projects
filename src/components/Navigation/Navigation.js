@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import { ListItem, Categories } from "../index";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import { navLinksInfo } from "../../utils/index";
-import styles from "./Navigation.module.css";
 import { getData } from "../../api";
+import styles from "./Navigation.module.css";
 
 const Navigation = ({ type }) => {
   const [classToggle, setClassToggle] = useState("hidden");
-  const [isShowCategory, setIsShowCategory] = useState(false);
+  const [isShowCategory, setIsShowCategory] = useState(type === 'footer' ? true : false);
   const [moviesGenres, setMoviesGenres] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Navigation = ({ type }) => {
   }, []);
 
   const clickHandler = (event) => {
-    event.preventDefault();
+    
     if (event.target.name === "category") {
       return setIsShowCategory(!isShowCategory);
     }
@@ -50,7 +50,7 @@ const Navigation = ({ type }) => {
           </button>
         </ul>
       </nav>
-      <button className={styles["header-button"]} onClick={clickHandler}>
+      <button className={styles[`${type}-button`]} onClick={clickHandler}>
         {classToggle === "hidden" ? <FaAngleDoubleDown /> : <FaAngleDoubleUp />}
       </button>
       {isShowCategory && (
