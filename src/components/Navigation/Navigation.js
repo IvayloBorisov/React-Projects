@@ -8,7 +8,9 @@ import styles from "./Navigation.module.css";
 
 const Navigation = ({ type }) => {
   const [classToggle, setClassToggle] = useState("hidden");
-  const [isShowCategory, setIsShowCategory] = useState(type === 'footer' ? true : false);
+  const [isShowCategory, setIsShowCategory] = useState(
+    type === "footer" ? true : false
+  );
   const [moviesGenres, setMoviesGenres] = useState([]);
 
   useEffect(() => {
@@ -21,7 +23,6 @@ const Navigation = ({ type }) => {
   }, []);
 
   const clickHandler = (event) => {
-    
     if (event.target.name === "category") {
       return setIsShowCategory(!isShowCategory);
     }
@@ -45,7 +46,11 @@ const Navigation = ({ type }) => {
               />
             );
           })}
-          <button className={styles["category-button"]}  name="category" onClick={clickHandler}>
+          <button
+            className={styles["category-button"]}
+            name="category"
+            onClick={clickHandler}
+          >
             Category
           </button>
         </ul>

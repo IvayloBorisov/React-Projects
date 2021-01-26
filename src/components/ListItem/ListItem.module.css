@@ -54,7 +54,15 @@
     .header-category-nav-item:hover {
         background-color: #404447;
         color: #B5CF4D; 
+    }
 
+    .footer-category-nav-item {
+        width: 30%;
+    }
+
+    .footer-category-nav-link:hover {
+        color: #B5CF4D;
+        border-bottom: 1px solid #fff;
     }
 }
 
