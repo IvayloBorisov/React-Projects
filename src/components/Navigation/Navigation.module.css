@@ -51,22 +51,18 @@
     display: none;
 }
 
-@media (min-width: 430px) {
+@media (min-width: 540px) {
 
     .list-container-hidden {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
     }
 
     .header-button {
         display: none;
     }
-}
-
-@media (min-width: 540px) {
 
     .list-container-hidden,
     .list-container-show,

@@ -1,11 +1,11 @@
 import { ListItem } from "../index";
 import styles from "./Categories.module.css";
 
-const Categories = ({ type, genre }) => {
+const Categories = ({ type, genre, clickHandler }) => {
   return (
     <>
       { type === 'footer' && <h3 className={styles.title}>Categories</h3> } 
-      <ul className={styles[`${type}-category-container`]}>
+      <ul name="category" className={styles[`${type}-category-container`]} onClick={clickHandler}>
         {genre &&
           genre.map((genre) => (
             <ListItem
