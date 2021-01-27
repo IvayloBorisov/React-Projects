@@ -9,6 +9,7 @@ import {
          CategoriesPage,
          MovieDetailsPage,
          TvDetailsPage,
+         SearchPage
         } from './pages/index';
 
 const Routes = () => {
@@ -24,6 +25,7 @@ const Routes = () => {
         <Route path="/category/:id" component={ CategoriesPage } />
         <Route path="/movie/:id" component={ MovieDetailsPage }/>
         <Route path="/tv/:id" component={ TvDetailsPage }/>
+        <Route path="search/:query" component={ SearchPage }/>
         <Redirect to={HomePage}/>
       </Switch>
     </Router>
