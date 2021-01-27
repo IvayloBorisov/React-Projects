@@ -23,7 +23,10 @@ const Navigation = ({ type }) => {
   }, []);
 
   const clickHandler = (event) => {
-    if (event.target.name === "category") {
+    const { localName } = event.target;
+    const { name } = event.target;
+
+    if (localName === "a" || name === "category") {
       return setIsShowCategory(!isShowCategory);
     }
     if (classToggle === "hidden") {
@@ -59,7 +62,12 @@ const Navigation = ({ type }) => {
         {classToggle === "hidden" ? <FaAngleDoubleDown /> : <FaAngleDoubleUp />}
       </button>
       {isShowCategory && (
-        <Categories path={"/category"} type={type} genre={moviesGenres} />
+        <Categories
+          path={"/category"}
+          type={type}
+          genre={moviesGenres}
+          clickHandler={clickHandler}
+        />
       )}
     </>
   );
