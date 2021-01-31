@@ -25,8 +25,9 @@ const Navigation = ({ type }) => {
   const clickHandler = (event) => {
     const { localName } = event.target;
     const { name } = event.target;
+    console.log(event)
 
-    if (localName === "a" || name === "category") {
+    if (type !== 'footer' && (localName === "a" || name === "category")) {
       return setIsShowCategory(!isShowCategory);
     }
     if (classToggle === "hidden") {

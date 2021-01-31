@@ -1,24 +1,16 @@
-import { useParams } from 'react-router-dom';
-import { MoviesContainer, Aside, Footer } from '../../components/index';
-import useSmoothLoading from '../../hooks/useSmoothLoading';
-import styles from './Search.module.css';
+import { useParams } from "react-router-dom";
+import { MoviesContainer, PageLayout } from "../../components/index";
 
 const Search = () => {
-
   const { query } = useParams();
-  const [name, setName] = useSmoothLoading();
   return (
-    <div onLoad={setName} className={` ${styles.container} ${styles[name]} `}>
-      <div className={styles.wrapper}>
-        <MoviesContainer 
-         urlParam={["search/movie", `&query=${query}`]} 
-         title={"Search"} 
-        />
-      </div>
-      <Aside />
-      <Footer />
-    </div>
+    <PageLayout>
+      <MoviesContainer
+        urlParam={["search/movie", `&query=${query}`]}
+        title={"Search"}
+      />
+    </PageLayout>
   );
-}
+};
 
 export default Search;

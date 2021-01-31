@@ -11,9 +11,3 @@
     z-index: 20;
 }
 
-@media (min-width: 900px) {
-
-    .header {
-        /* flex-wrap: nowrap; */
-    }
-}
