@@ -1,13 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const useSmoothLoading = () => {
-    
-    const [ visible, setVisible ] = useState(false);  
+  const [visible, setVisible] = useState(false);
 
-    return [
-        visible ? 'visible' : 'hidden',
-        () => setVisible(true)
-    ];
-}
+  return [visible ? "visible" : "hidden", () => setVisible(true)];
+};
 
 export default useSmoothLoading;

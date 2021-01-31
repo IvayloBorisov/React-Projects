@@ -18,7 +18,6 @@ const MoviesContainer = ({ urlParam, title }) => {
   }, [urlParam, pageNumber]);
 
   const handleClick = (event) => {
-    event.preventDefault();
 
     if (event.target.name === "prev") {
       return setPageNumber(pageNumber - 1);

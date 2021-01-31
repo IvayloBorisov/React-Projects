@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AltImage } from '../index';
+import { formatDate, formatOverview } from '../../utils/index';
 import styles from "./Image.module.css";
 
-const Image = ({ type, id, backdrop_path, poster_path }) => {
-  
+const Image = ({ id, backdrop_path, poster_path, type, title, name, first_air_date, cardGenre, vote_average, overview}) => {
+
   const [imageIsLoaded, setImageIsLoaded] = useState(false);
   const [ alt, setAlt ] = useState(false);
   const handleImageLoad = () => {
@@ -28,6 +29,21 @@ const Image = ({ type, id, backdrop_path, poster_path }) => {
           />   
           : <AltImage />
         }
+         <div className={styles[ `${ type }-content` ]}>
+        <h4 className={styles[`${ type }-title` ]}>{ type === 'movie' ? title : name }</h4>
+        {
+          type === 'tv' ? 
+            <div className={ styles[ `${ type }-info` ] }>
+              <span>{ `${ formatDate(first_air_date) }` }</span>
+              <span>{ `${ cardGenre }` }</span>
+              <span>{ ` ${ vote_average }/10` }</span>
+              <div className={ styles[ 'overview-info' ] }>
+                <h4 className={ styles[ `${ type }-overview` ]} >Summary</h4>
+                <p >{ `${ formatOverview(overview) }` }</p>
+              </div> 
+            </div>  : ''
+        }
+      </div>
       </Link>
     </div>
   );

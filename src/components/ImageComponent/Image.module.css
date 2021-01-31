@@ -1,4 +1,3 @@
-
 /* Image for mobile devices */
 
 .movie-image-container {
@@ -13,6 +12,37 @@
     box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.28),
       0 1px 1px 0 rgba(255, 255, 255, 0.22), inset 0 0 1px 1px rgba(0, 0, 0, 0.3),
       inset 0 0 50px 1px transparent;
+  }
+
+  .movie-image-container:hover .movie-title {
+    color: #b5cf4d;
+  }
+
+  .movie-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(58, 56, 56, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+    .backdrop-blur {
+      background-color: rgba(88, 83, 83, 0.5);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+  }
+  
+  .movie-title {
+    width: 80%;
+    color: #fff;
+    text-align: center;
   }
   
   .movie-image {
@@ -32,9 +62,100 @@
       opacity: 1;
   }
 
+  /* TV card for mobile devices */
+  
   .tv-image {
     width: 100%;
     display: block;
     height: auto;
     transition: opacity 4s;
+  }
+  
+  .tv-content {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -220px;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    transition: 0.5s;
+    padding: 0em 1em;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .tv-image-container:hover .tv-content {
+    bottom: 0px;
+  }
+  
+  .tv-title {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .tv-title, .tv-overview {
+    color: #fff;
+  }
+  
+  .tv-info {
+    width: 100%;
+    color: #b5cf4d;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tv-info span {
+    margin-right: 0.5em;
+  }
+  
+  .tv-overview {
+    width: 100%;
+  }
+  
+  @media(min-width: 400px) {
+  
+    .tv-content {
+      height: 160px;
+      bottom: -160px;
+    }
+  
+    .tv-info {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    
+  }
+  
+  @media(min-width: 540px) {
+    
+    .tv-card {
+      width: 45%;
+      margin: 0.5em 0.5em;
+    }
+  
+    .tv-content {
+      height: 220px;
+      bottom: -220px;
+    }
+  }
+  
+  /* TV card for Desktop devices */
+  
+  @media (min-width: 1024px) {
+  
+    .tv-content {
+      height: 240px;
+      bottom: -240px;
+    }
+  
+    .tv-card {
+      width: 45%;
+    }
   }
