@@ -54,14 +54,6 @@
     transition: opacity 2s;
   }
 
-  .hidden {
-      opacity: 0;
-  }
-
-  .visible {
-      opacity: 1;
-  }
-
   /* TV card for mobile devices */
   
   .tv-image {

@@ -14,3 +14,4 @@ export { default as Image} from './ImageComponent/Image';
 export { default as AltImage } from './AltImage/AltImage';
 export { default as Categories } from './Categories/Categories';
 export { default as PageLayout } from './PageLayout/PageLayout';
+export {default as Loading} from './Loading/Loading';

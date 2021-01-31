@@ -45,4 +45,8 @@ export const formatOverview = string => string.slice(0, 80) + "...";
 
 export const extractGenreName = str => str.split(" ")[0].split("&")[0];
 
+export const fakeRequest = () => {
+    return new Promise(resolve => setTimeout(() => resolve(), 2000));
+  }
+
 
