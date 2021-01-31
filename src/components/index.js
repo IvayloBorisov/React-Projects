@@ -13,3 +13,4 @@ export { default as Button } from './Button/Button';
 export { default as Image} from './ImageComponent/Image';
 export { default as AltImage } from './AltImage/AltImage';
 export { default as Categories } from './Categories/Categories';
+export { default as PageLayout } from './PageLayout/PageLayout';
