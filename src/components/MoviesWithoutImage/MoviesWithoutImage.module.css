@@ -1,0 +1,39 @@
+.container {
+    width: calc(100% - 1em);
+    height: 4em;
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #000;
+}
+
+.container:nth-child(even) {
+    background-color: #181818;
+}
+
+.release-date {
+    display: none;
+    background-color: #697634;
+    color: #000;
+    font-weight: 600;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    padding: 1em;
+}
+
+@media(min-width: 540px) {
+
+    .container {
+        width: calc(90% + 1em);
+    }
+}
+
+@media(min-width: 650px) {
+
+    .release-date {
+        display: block;
+    }
+}
+

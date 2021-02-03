@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Header } from './components/index';
 import {
@@ -26,7 +26,6 @@ const Routes = () => {
         <Route path="/movie/:id" component={ MovieDetailsPage }/>
         <Route path="/tv/:id" component={ TvDetailsPage }/>
         <Route path="/search/:query" component={ SearchPage }/>
-        <Redirect to={HomePage}/>
       </Switch>
     </Router>
     )

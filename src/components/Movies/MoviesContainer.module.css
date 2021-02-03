@@ -10,7 +10,7 @@
 }
 
 .btn-container {
-   width: calc(90% + 1em);
+   width: calc(100% - 1em);
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -19,12 +19,29 @@
    background-color: #1C1C1C;
 }
 
+.title-wrapper {
+   width: calc(100% - 1em);
+   margin-top: 2em;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+}
+
 @media (min-width: 540px) {
    .container {
       width: 100%;
    }
 
-   .button-container {
+   .btn-container,
+   .title-wrapper {
       width: calc(90% + 1em);
+   }
+}
+
+@media (min-width: 1024px) {
+
+   .title-wrapper {
+      margin-top: 4em;
    }
 }

@@ -1,4 +1,4 @@
-import styles from "./Button.module.css";
+import styles from './PaginationButton.module.css';
 
 const Button = ({ click, name }) => {
 

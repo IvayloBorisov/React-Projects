@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import { ListItem, Categories } from "../index";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 import { navLinksInfo } from "../../utils/index";

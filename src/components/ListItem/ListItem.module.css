@@ -1,23 +1,23 @@
 /* Mobile Devices */
-.header-nav-item {
+.header-item {
     width: 50%;
     text-align: center;
 }
 
-.header-nav-item:hover {
+.header-item:hover {
     background-color: #B5CF4D;
 }
 
-.header-nav-link {
+.header-link {
     display: block;
     padding: 1.5em 0em;
 }
 
-.header-nav-link:hover {
+.header-link:hover {
     color: #fff; 
 }
 
-.header-category-nav-item {
+.header-category-item {
     cursor: pointer;
     width: 70%;
     text-align: center;
@@ -26,41 +26,54 @@
     margin-top: 4px;
 }
 
-.header-category-nav-item:hover{
+.header-category-item:hover{
     background-color: #B5CF4D;
 }
 
-.header-category-nav-link {
+.header-category-link {
     display: block;
     padding: 0.5em 0em;
 }
 
+.line-view-item {
+    width: 100%;
+}
+
+.line-view-link {
+    display: block;
+    padding: 2em 1em;
+}
+
+.line-view-link:hover {
+    color: #B5CF4D
+}
+
 @media (min-width: 540px) {
 
-    .header-nav-item:hover {
+    .header-item:hover {
         background-color: #333333;
     }
 
-    .header-nav-link:hover,
-    .header-category-nav-link:hover {
+    .header-link:hover,
+    .header-category-link:hover {
         color: #B5CF4D; 
     }
 
-    .header-category-nav-item {
+    .header-category-item {
         width: 30%;
         margin: 4px;
     }
 
-    .header-category-nav-item:hover {
+    .header-category-item:hover {
         background-color: #404447;
         color: #B5CF4D; 
     }
 
-    .footer-category-nav-item {
+    .footer-category-item {
         width: 30%;
     }
 
-    .footer-category-nav-link:hover {
+    .footer-category-link:hover {
         color: #B5CF4D;
         border-bottom: 1px solid #fff;
     }
@@ -68,7 +81,7 @@
 
 @media (min-width: 900px) {
 
-    .header-category-nav-item {
+    .header-category-item {
         width: 15%;
     }
 }
