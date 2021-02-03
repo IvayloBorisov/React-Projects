@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { DetailsCard, Card, Title, Button } from "../index";
+import { DetailsCard, Card, Title, Button, MoviesWithoutImage, ViewModeBtn } from "../index";
 import { getData } from "../../api/index";
-
 import styles from "./MoviesContainer.module.css";
 
 const MoviesContainer = ({ urlParam, title }) => {
   const [data, setData] = useState([]);
+  const [ viewMode, setViewMode ] = useState("column");
   const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const MoviesContainer = ({ urlParam, title }) => {
     getFilmsData();
   }, [urlParam, pageNumber]);
 
-  const handleClick = (event) => {
+  const handleClickPaginationBtn = (event) => {
 
     if (event.target.name === "prev") {
       return setPageNumber(pageNumber - 1);
@@ -25,13 +25,25 @@ const MoviesContainer = ({ urlParam, title }) => {
     setPageNumber(pageNumber + 1);
   };
 
+  const handleClickVewBtn = event => {
+    if(viewMode === "column") {
+      return setViewMode("line");
+    }
+    setViewMode("column");
+  }
+
   return (
     <>
       <div className={styles.container}>
-        <Title titlePage={title} type={"movie"} />
+        <div className={styles['title-wrapper']}>
+          <Title titlePage={title} type={"movie"} />
+          { data.total_pages && <ViewModeBtn name={viewMode}  handleClick={ handleClickVewBtn }/> }
+        </div>
         {data.results ? (
           data.results.map((movie) => {
-            return <Card key={movie.id} type={"movie"} {...movie} />;
+            return viewMode === "column" ?
+             <Card key={movie.id} type={"movie"} {...movie} />
+             : <MoviesWithoutImage key={movie.id} type={"movie"} {...movie}/>
           })
         ) : (
         
@@ -39,8 +51,8 @@ const MoviesContainer = ({ urlParam, title }) => {
         )}
         {data.results &&
         <div className={styles["btn-container"]}>
-          {pageNumber !== 1 && <Button click={handleClick} name={"prev"} />}
-          <Button click={handleClick} name={"next"} />
+          {pageNumber !== 1 && <Button click={handleClickPaginationBtn} name={"prev"} />}
+          <Button click={handleClickPaginationBtn} name={"next"} />
         </div>
         }
         
