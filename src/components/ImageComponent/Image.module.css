@@ -72,17 +72,13 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -220px;
+    bottom: 0px;
     left: 0;
     backdrop-filter: blur(10px);
     z-index: 10;
     transition: 0.5s;
     padding: 0em 1em;
     background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  .tv-image-container:hover .tv-content {
-    bottom: 0px;
   }
   
   .tv-title {
@@ -115,7 +111,7 @@
   
     .tv-content {
       height: 160px;
-      bottom: -160px;
+      bottom: 0px;
     }
   
     .tv-info {
@@ -135,6 +131,10 @@
     .tv-content {
       height: 220px;
       bottom: -220px;
+    }
+
+    .tv-image-container:hover .tv-content {
+      bottom: 0px;
     }
   }
   
