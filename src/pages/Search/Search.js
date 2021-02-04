@@ -7,7 +7,7 @@ const Search = () => {
     <PageLayout>
       <MoviesContainer
         urlParam={["search/movie", `&query=${query}`]}
-        title={"Search"}
+        title={"Results"}
       />
     </PageLayout>
   );

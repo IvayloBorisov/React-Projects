@@ -7,7 +7,7 @@ const TvDetails = () => {
     <PageLayout>
       <MoviesContainer
        urlParam={[`tv/${tvId}`]}
-       title={"About the show"} 
+       title={"About the tv serials"} 
       />
     </PageLayout>
   );
