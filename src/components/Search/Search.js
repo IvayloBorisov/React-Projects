@@ -19,6 +19,7 @@ const Search = () => {
   const handleSubmit = event => {
     event.preventDefault();
     history.push(`/search/${query}`);
+    // window.scrollTo(0, 0);
   }
 
   return (
