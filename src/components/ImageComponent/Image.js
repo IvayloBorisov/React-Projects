@@ -19,9 +19,13 @@ const Image = ({
   
   const [alt, setAlt] = useState(false);
 
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div className={styles[`${type}-image-container`]}>
-      <Link to={`/${type}/${id}`}>
+      <Link onClick={handleClick} to={`/${type}/${id}`}>
         {!alt ? (
           <img
             className={`${
