@@ -4,7 +4,8 @@
 This is a movie application, which show movies and TV serials information. The app make a
 request to [The MovieDB API](https://developers.themoviedb.org/3/getting-started/introduction), and display 
 the response from the API. You can search the movies by different categories or search them by name. The 
-application give details about every selected movie, and it has two different view modes.
+application give details about every selected movie, and it has two different view modes. You can visit it 
+[here](https://movieaddict.netlify.app/).
 
 ## Table of Content
 1. [Technology stack](https://github.com/IvayloBorisov/react-movie-app#technology-stack)
